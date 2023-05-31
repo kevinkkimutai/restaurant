@@ -12,29 +12,30 @@
                       <h4 class="mb-2 pb-3">SignUp</h4>
                       <div class="row justify-content-center ">
                         <div class="form-group col-md-6 pr-2">
-                          <input type="text" class="form-style" placeholder="Firstname" />
+                          <input type="text" class="form-style" v-model="firstname" placeholder="Firstname" />
                           <i class="input-icon uil uil-at"></i>
                         </div>
                         <div class="form-group col-md-5">
-                          <input type="email" class="form-style" placeholder="Lastname" />
+                          <input type="text" class="form-style" v-model="lastname" placeholder="Lastname" />
                           <i class="input-icon uil uil-at"></i>
                         </div>
                       </div>
                       <div class="form-group mt-2">
-                          <input type="email" class="form-style" placeholder="Email" />
+                          <input type="email" class="form-style" v-model="email" placeholder="Email" />
                           <i class="input-icon uil uil-at"></i>
                         </div>
                       <div class="form-group mt-2">
                         <input
                           type="password"
+                          v-model="password"
                           class="form-style"
                           placeholder="Password"
                         />
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>
-                      <a href="https://www.web-leb.com/code" class="btn mt-4">SignUp</a>
+                      <button @click="signUp" class="btn mt-4">SignUp</button>
                       <p class="mb-0 mt-4 text-center">
-                        <a href="https://www.web-leb.com/code" class="link"
+                        <a href="#" class="link"
                           >Already have an account?</a
                         >
                       </p>
@@ -57,7 +58,8 @@ export default {
   name: "SignUp",
   data() {
     return {
-      username: "",
+      firstname: "",
+      lastname: "",
       email: "",
       password: "",
     };
@@ -65,7 +67,8 @@ export default {
   methods: {
     async signUp() {
       let result = await axios.post("/users/signup", {
-        username: this.username,
+        firstname: this.firstname,
+        lastname: this.lastname,
         email: this.email,
         password: this.password,
       });
@@ -212,7 +215,7 @@ h6 span {
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #df1818;
+  color: #c4c3ca;
   background-color: #1f2029;
   border: none;
   -webkit-transition: all 200ms linear;
@@ -224,6 +227,8 @@ h6 span {
   border: none;
   outline: none;
   box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+  color: #000000;
+  background-color: #ffffff;
 }
 .input-icon {
   position: absolute;

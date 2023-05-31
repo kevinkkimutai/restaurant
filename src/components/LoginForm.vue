@@ -179,7 +179,7 @@ display: none;
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
-  color: #c4c3ca;
+  color: #ffffff;
   background-color: #1f2029;
   border: none;
   -webkit-transition: all 200ms linear;
@@ -191,6 +191,8 @@ display: none;
   border: none;
   outline: none;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  color: #000000;
+  background-color: #ffffff;
 }
 .input-icon {
   position: absolute;
