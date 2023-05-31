@@ -1,201 +1,229 @@
 <template>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form>
-      <div class="user-box">
-        <input type="text" name="" required="">
-        <label>Username</label>
+  <div class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center align-self-center py-5">
+          <div class="section pb-0 pt-0 text-center">
+            <div class="card-3d-wrap mx-auto">
+              <div class="card-3d-wrapper">
+                <div class="card-front">
+                  <div class="center-wrap">
+                    <div class="section text-center">
+                      <h4 class="mb-2 pb-3">Log In</h4>
+                      <div class="form-group">
+                        <input type="email" class="form-style" placeholder="Email" />
+                        <i class="input-icon uil uil-at"></i>
+                      </div>
+                      <div class="form-group mt-2">
+                        <input
+                          type="password"
+                          class="form-style"
+                          placeholder="Password"
+                        />
+                        <i class="input-icon uil uil-lock-alt"></i>
+                      </div>
+                      <a href="https://www.web-leb.com/code" class="btn mt-4">Login</a>
+                      <p class="mb-0 mt-4 text-center">
+                        <a href="https://www.web-leb.com/code" class="link"
+                          >Forgot your password?</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="user-box">
-        <input type="password" name="" required="">
-        <label>Password</label>
-      </div>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LoginForm',
+  name: "LoginForm",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+a:hover {
+	text-decoration: none;
 }
-
-.login-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
+.link {
+  color: #ffeba7;
 }
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
+.link:hover {
+  color: #c4c3ca;
 }
-
-.login-box .user-box {
+p {
+  font-weight: 500;
+  font-size: 14px;
+}
+h4 {
+  font-weight: 600;
+}
+h6 span{
+  padding: 0 20px;
+  font-weight: 700;
+}
+.section{
   position: relative;
-}
-
-.login-box .user-box input {
   width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.login-box .user-box label {
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #f68e44;
-  font-size: 12px;
-}
-
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #b79726;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-}
-
-.login-box a:hover {
-  background: #f49803;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #f4c803,
-              0 0 25px #bd9d0b,
-              0 0 50px #f4e403,
-              0 0 100px #d5cf1e;
-}
-
-.login-box a span {
-  position: absolute;
   display: block;
 }
-
-.login-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
+.full-height{
+  min-height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+display: none;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #020305;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+.card-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.card-3d-wrapper {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #f4c003);
-  animation: btn-anim1 1s linear infinite;
-}
-
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,100% {
-    left: 100%;
-  }
-}
-
-.login-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #f4bc03);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  position:absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
 }
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,100% {
-    top: 100%;
-  }
-}
-
-.login-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
+.card-front, .card-back {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #f4dc03);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  height: 100%;
+  background-color: #2b2e38;
+  /* background-image: url('/img/pattern_japanese-pattern-2_1_2_0-0_0_1__ffffff00_000000.png'); */
+  position: absolute;
+  border-radius: 6px;
+  -webkit-transform-style: preserve-3d;
 }
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-  50%,100% {
-    right: 100%;
-  }
+.card-back {
+  transform: rotateY(180deg);
 }
-
-.login-box a span:nth-child(4) {
-  bottom: -100%;
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
   left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #f4b003);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
 }
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,100% {
-    bottom: 100%;
-  }
+.form-group{ 
+  position: relative;
+  display: block;
+    margin: 0;
+    padding: 0;
 }
-
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  -webkit-transition: all 200ms linear;
+   transition: all 200ms linear;
+}
+.btn{  
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffeba7;
+  color: #000000;
+}
+.btn:hover{  
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
 
 </style>

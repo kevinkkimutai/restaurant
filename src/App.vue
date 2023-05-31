@@ -23,11 +23,12 @@ export default {
 html {
   height: 100%;
 }
-body {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: linear-gradient(#30142b, #a12727);
+body{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+	color: #ffeba7;
+	background-color: #1f2029;
 }
 
 </style>
